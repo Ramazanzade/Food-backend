@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../../model/usermodel');
 require('dotenv').config();
 exports.createUser = async (req, res) => {
-    const {  email, password,name , type, url} = req.body;
+    const {  email, paswword,name , type, url} = req.body;
     const isNewUser = await User.isThisEmailInUse(email);
     if (!isNewUser)
         return res.json({
@@ -11,7 +11,7 @@ exports.createUser = async (req, res) => {
         });
     const user = await User({
         email,
-        password,
+        paswword,
         name,
         url,
         type  
@@ -21,7 +21,7 @@ exports.createUser = async (req, res) => {
 };
 
 exports.userSignIn = async (req, res) => {
-    const { email, password,name, url,type} = req.body;
+    const { email, paswword,name, url,type} = req.body;
   
     const user = await User.findOne({ email });
   
@@ -31,7 +31,7 @@ exports.userSignIn = async (req, res) => {
         message: 'User not found with the given email!',
       });
     }
-    const isMatch = await user.comparepassword(password);
+    const isMatch = await user.comparepassword(paswword);
     
     if (!isMatch) {
       return res.status(401).json({
@@ -65,7 +65,7 @@ exports.userSignIn = async (req, res) => {
   
     const userInfo = {
       email: user.email,
-      password: user.password,
+      paswword: user.paswword,
       name:user.name,
       url:user.url,
       type:user.type
