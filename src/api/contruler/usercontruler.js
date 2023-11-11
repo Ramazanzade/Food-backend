@@ -36,7 +36,7 @@ exports.userSignIn = async (req, res) => {
     if (!isMatch) {
       return res.status(401).json({
         success: false,
-        message: 'password does not !',
+        message: 'password does not match!',
       });
     }
     let token;
