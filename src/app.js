@@ -19,7 +19,7 @@ app.use('/api/user', userrouter)
 app.use('/api/file', fileupload)
 app.use((err,res)=>{
     res.status(err.statusCode || 500).json({
-        message:err?.message || "Server error",
+        message:err?.message || "Server erro",
         statusCode:err.statusCode || 500
     })
 })
