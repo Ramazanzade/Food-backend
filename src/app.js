@@ -40,29 +40,3 @@ module.exports.handler = serverless(app);
 
 
 
-
-
-
-
-
-// import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-// import { faHeart } from '@fortawesome/free-solid-svg-icons';
-// import Svg, { G, Path } from 'react-native-svg';
-
-// return (
-//     <Svg
-//       aria-hidden="true"
-//       focusable="false"
-//       data-prefix="fas"
-//       data-icon="heart"
-//       role="img"
-//       xmlns="../asset/1.png"
-//       viewBox="0 0 512 512"
-//     >
-//       <G>
-//         <Path
-//           fill="currentColor"
-//           d="M458.3 46.7C415.7 4.1 352-5.3 306.6 40.1L256 90.7l-50.6-50.6C160-5.3 96.3 4.1 53.7 46.7c-52.5 52.6-52.5 138.2 0 190.8L256 501.9l202.3-202.4c52.5-52.6 52.5-138.2 0-190.8z"
-//         />
-//       </G>
-//     </Svg>
