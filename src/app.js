@@ -1,5 +1,5 @@
 const express=require('express')
-const { CONNECTION_STRING}=require('./config/index')
+const { CONNECTION_STRING}=require('./config')
 const {mongoose}= require('mongoose')
 const cors = require('cors')
 const app = express()
