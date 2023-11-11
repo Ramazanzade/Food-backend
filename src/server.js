@@ -1,7 +1,7 @@
-const https =require('https')
+const http =require('http')
 const app =require('./app')
 require('dotenv').config();
-const server = https.createServer(app)
+const server = http.createServer(app)
 
   
 server.listen(8080)
