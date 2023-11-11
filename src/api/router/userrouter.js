@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('../../models/usermodel');
+const User = require('../../model/usermodel');
 const cors = require('cors');
 
 const router = express.Router();
@@ -9,12 +9,7 @@ const {
     uploadProfile,
     signOut,
     GetAll,
-    Delete,
-    fileadd,
-    filesget,
-    fileget2,
-    filedelet,
-    
+    Delete,    
 } = require('../contruler/usercontruler');
 const { isAuth } = require('../../Middlewares/auht');
 const {

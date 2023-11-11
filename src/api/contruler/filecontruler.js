@@ -1,7 +1,7 @@
 require('dotenv').config();
 const path = require('path');
 const multer = require('multer');
-const File = require("../../models/filemodel");
+const File = require("../../model/filemodel");
 const fs = require('fs');
 const express = require('express');
 const app = express();
