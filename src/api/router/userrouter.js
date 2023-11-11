@@ -6,7 +6,6 @@ const router = express.Router();
 const {
     createUser,
     userSignIn,
-    uploadProfile,
     signOut,
     GetAll,
     Delete,    
