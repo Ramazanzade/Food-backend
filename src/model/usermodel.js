@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique: true,
   },
-  paswword: {
+  password: {
     type: String,
     unique: true,
   },
@@ -25,14 +25,14 @@ const userSchema = new mongoose.Schema({
 });
 
 
-userSchema.methods.comparepassword = async function (paswword) {
-  if (!paswword) throw new Error('paswword is mission, can not compare!');
+userSchema.methods.comparepassword = async function (password) {
+  if (!password) throw new Error('Password is mission, can not compare!');
 
   try {
-    const result = await bcrypt.compare(paswword, this.paswword);
+    const result = await bcrypt.compare(password, this.password);
     return result;
   } catch (error) {
-    console.log('Error while comparing paswword!', error.message);
+    console.log('Error while comparing password!', error.message);
   }
 };
 
