@@ -7,7 +7,7 @@ exports.createUser = async (req, res) => {
     if (!isNewUser)
         return res.json({
             success: false,
-            message: 'This email is already in use, try again',
+            message: 'Error',
         });
     const user = await User({
         email,
