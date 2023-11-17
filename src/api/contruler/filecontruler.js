@@ -52,7 +52,7 @@ exports.fileadd = async (req, res, next) => {
       res.json(savedFiles);
     } catch (err) {
       console.error('Error saving files:', err);
-      res.status(500).json({ message: 'Error saving files', error: err });
+      // res.status(500).json({ message: 'Error saving files', error: err });
     }
   });
 };
@@ -67,7 +67,7 @@ exports.filesget = async (req, res) => {
 
     res.json(files);
   } catch (err) {
-    console.error('Error retrieving files:', err);
+    // console.error('Error retrieving files:', err);
     res.status(500).json({ message: 'Error retrieving files', error: err });
   }
 };
