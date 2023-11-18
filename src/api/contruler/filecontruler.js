@@ -43,8 +43,8 @@ exports.fileadd = async (req, res, next) => {
 
     try {
       const files = req.files.map(file => ({
-        url: `${req.protocol}://${req.get('host')}/file/${file.filename}`,
-        type: file.mimetype.startsWith('image') ? 'image' : 'video',
+        // url: `${req.protocol}://${req.get('host')}/file/${file.filename}`,
+        // type: file.mimetype.startsWith('image') ? 'image' : 'video',
         filename: file.filename,
       }));
 
@@ -62,13 +62,13 @@ exports.filesget = async (req, res) => {
     const files = await File.find();
 
     if (files.length === 0) {
-      return res.status(404).send('No files found');
+      // return res.status(404).send('No files found');
     }
 
     res.json(files);
   } catch (err) {
-    // console.error('Error retrieving files:', err);
-    res.status(500).json({ message: 'Error retrieving files', error: err });
+    console.error('Error retrieving files:', err);
+    // res.status(500).json({ message: 'Error retrieving files', error: err });
   }
 };
 
